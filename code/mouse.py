@@ -43,6 +43,13 @@ mod = Module()
 mod.list(
     "mouse_button", desc="List of mouse button words to mouse_click index parameter"
 )
+# my own changes to make pop available at all times:
+setting_enable_pop_click = mod.setting(
+    "enable_pop_click",
+    type=int,
+    default=0,
+    desc="Have pop to click enabled even when control mouse is disabled.",
+)
 setting_mouse_enable_pop_click = mod.setting(
     "mouse_enable_pop_click",
     type=int,
@@ -256,7 +263,8 @@ def on_pop(active):
     ):
         if setting_mouse_enable_pop_click.get() >= 1:
             ctrl.mouse_click(button=0, hold=16000)
-
+    elif setting_enable_pop_click.get() >= 1:
+        ctrl.mouse_click(button=0, hold=16000)
 
 noise.register("pop", on_pop)
 

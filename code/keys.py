@@ -106,7 +106,7 @@ def letters(m) -> str:
 ctx = Context()
 ctx.lists["self.modifier_key"] = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
-    "alt": "alt",  #'alter': 'alt',
+    "alter": "alt", #"alt": "alt",  
     "command": "cmd",
     "control": "ctrl",  #'troll':   'ctrl',
     "option": "alt",

@@ -1,27 +1,15 @@
 #provide both anchored and unachored commands via 'over'
-say <user.text>$:
-  result = user.formatted_text(text, "NOOP")
-  insert(' ')
-  insert(result)
-say <user.text> over:
-  result = user.formatted_text(text, "NOOP")
-  insert(' ')
-  insert(result)
-speak <user.text>$:
-  result = user.formatted_text(text, "NOOP")
-  insert(result)
-speak <user.text> over:
-  result = user.formatted_text(text, "NOOP")
-  insert(result)
-phrase <user.text>$:
-  result = user.formatted_text(text, "NOOP")
-  insert(result)
-  insert(' ')
-phrase <user.text> over:
-  result = user.formatted_text(text, "NOOP")
-  insert(result)
-  insert(' ')
-<user.format_text>+$: user.insert_many(format_text_list)
+phrase <user.text>$: user.insert_formatted(text, "NOOP")
+phrase <user.text> over: user.insert_formatted(text, "NOOP")
+speak <user.prose>$: user.insert_formatted(prose, "NOOP")
+speak <user.prose> over: user.insert_formatted(prose, "NOOP")
+say <user.prose>$:
+    insert(' ')
+    user.insert_formatted(prose, "NOOP")
+say <user.prose> over:
+    insert(' ')
+    user.insert_formatted(prose, "NOOP")
+<user.1000>+$: user.insert_many(format_text_list)
 <user.format_text>+ over: user.insert_many(format_text_list)
 <user.formatters> that: user.formatters_reformat_selection(user.formatters)
 word <user.word>: insert(user.word)

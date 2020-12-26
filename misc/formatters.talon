@@ -9,7 +9,7 @@ say <user.prose>$:
 say <user.prose> over:
     insert(' ')
     user.insert_formatted(prose, "NOOP")
-<user.1000>+$: user.insert_many(format_text_list)
+<user.format_text>+$: user.insert_many(format_text_list)
 <user.format_text>+ over: user.insert_many(format_text_list)
 <user.formatters> that: user.formatters_reformat_selection(user.formatters)
 word <user.word>: insert(user.word)

@@ -10,8 +10,11 @@ action(edit.delete):
 	key(backspace)
 
 action(edit.delete_line):
-	edit.select_line()
-	edit.delete()
+	edit.line_start()
+	edit.line_start()
+	key(ctrl-k backspace)
+	#edit.select_line()
+	#edit.delete()
 
 #action(edit.delete_paragraph):
 

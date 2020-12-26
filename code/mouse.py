@@ -254,7 +254,7 @@ def show_cursor_helper(show):
 
 
 def on_pop(active):
-    if gaze_job or scroll_job:
+    if scroll_job:
         if setting_mouse_enable_pop_stops_scroll.get() >= 1:
             stop_scroll()
     elif (
@@ -322,7 +322,8 @@ def gaze_scroll():
             return
 
         midpoint = rect.y + rect.height / 2
-        amount = int(((y - midpoint) / (rect.height / 10)) ** 3)
+        amount = int(((y - midpoint) / (rect.height / 10)) ** 3)# ((y - midpoint) / (rect.height / 10)) ranges from -5 to 5
+        amount /= 2
         actions.mouse_scroll(by_lines=False, y=amount)
 
     # print(f"gaze_scroll: {midpoint} {rect.height} {amount}")

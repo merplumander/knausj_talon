@@ -2,12 +2,12 @@ control mouse: user.mouse_toggle_control_mouse()
 zoom mouse: user.mouse_toggle_zoom_mouse()
 camera overlay: user.mouse_toggle_camera_overlay()
 run calibration: user.mouse_calibrate()	
-touch: 
-	mouse_click(0)
-	# close the mouse grid if open
-	user.grid_close()
+# touch: 
+# 	mouse_click(0)
+# 	# close the mouse grid if open
+# 	user.grid_close()
 
-righty: 
+clicker:
 	mouse_click(1)
 	# close the mouse grid if open
 	user.grid_close()
@@ -36,7 +36,7 @@ midclick:
 	key("{modifiers}:up")
 	# close the mouse grid
 	user.grid_close()
-(dubclick | duke): 
+dubclick:
 	mouse_click()
 	mouse_click()
 	# close the mouse grid
@@ -47,10 +47,10 @@ midclick:
 	mouse_click()
 	# close the mouse grid
 	user.grid_close()
-drag: 
-	user.mouse_drag()
-	# close the mouse grid
-	user.grid_close()
+# drag: 
+# 	user.mouse_drag()
+# 	# close the mouse grid
+# 	user.grid_close()
 wheel down: user.mouse_scroll_down()
 wheel down here:
     user.mouse_move_center_active_window()

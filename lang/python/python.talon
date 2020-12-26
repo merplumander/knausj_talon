@@ -116,9 +116,9 @@ returns [type] {user.python_type_list}:
 # for generic reference of types
 type {user.python_type_list}:
     insert("{python_type_list}")
-dock {user.python_docstring_fields}:
-    insert("{python_docstring_fields}")
-    edit.left()
+# dock {user.python_docstring_fields}:
+#     insert("{python_docstring_fields}")
+#     edit.left()
 dock type {user.python_type_list}:
     user.insert_cursor(":type [|]: {python_type_list}")
 dock returns type {user.python_type_list}:

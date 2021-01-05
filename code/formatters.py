@@ -154,7 +154,8 @@ formatters_words = {
     "allcaps": formatters_dict["ALL_CAPS"],
     "alldown": formatters_dict["ALL_LOWERCASE"],
     "camel": formatters_dict["PRIVATE_CAMEL_CASE"],
-    "dotted": formatters_dict["DOT_SEPARATED"],
+    #"dotted": formatters_dict["DOT_SEPARATED"],
+    "dotsway": formatters_dict["DOT_SEPARATED"],
     "dubstring": formatters_dict["DOUBLE_QUOTED_STRING"],
     # possibly wav2letter or Dragon prefers "dub string"
     "dub string": formatters_dict["DOUBLE_QUOTED_STRING"],

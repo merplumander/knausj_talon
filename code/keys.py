@@ -136,7 +136,7 @@ punctuation_words = {
     "dollar sign": "$",
     "asterisk": "*",
     "hash sign": "#",
-    "number sign": "#",
+    #"number sign": "#",
     "percent sign": "%",
     "at sign": "@",
     "and sign": "&",

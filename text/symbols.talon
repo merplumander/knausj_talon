@@ -2,7 +2,7 @@ question [mark]: "?"
 (downscore | underscore): "_"
 double dash: "--"
 (bracket | brack | left bracket): "{"
-# I don't use "rbrack" and had false positives.
+# I don't use "rbrack" and had false positives, so I removed it.
 (are bracket | right bracket): "}"
 triple quote: "'''"
 (dot dot | dotdot): ".."
